@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+
+        <!-- View on Invoice.order-->
+        <record model="ir.ui.view" id="purchase_quick_price_wizard_invoice_form_view">
+            <field name="name">wizard.quick.price.invoice.line.form</field>
+            <field name="model">account.invoice</field>
+            <field name="inherit_id" ref="account.invoice_supplier_form"/>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='price_unit']" position="after">
+                    <button name="action_view_supplier_price" string="Supplier price" type="object" icon="fa-external-link" class="oe_edit_only"/>
+                </xpath>
+            </field>
+        </record>
+        
+        <!-- View on purchase.order-->
+        <record model="ir.ui.view" id="purchase_quick_price_wizard_purchaxe_order_form_view">
+            <field name="name">wizard.quick.price.purchase.order.line.form</field>
+            <field name="model">purchase.order</field>
+            <field name="inherit_id" ref="purchase.purchase_order_form"/>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='order_line']/tree/field[@name='price_unit']" position="after">
+                    <button name="action_view_supplier_price" string="Supplier price" type="object" icon="fa-external-link" class="oe_edit_only"/>
+                </xpath>
+            </field>
+        </record>
+        
+        <!-- Wizard -->
+        
+        <record model="ir.ui.view" id="purchase_quick_price_wizard_view">
+            <field name="name">wizard.purchase.order.line.form</field>
+            <field name="model">product.supplierinfo</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree string="Supplier Information" editable="top">
+                    <field name="sequence" widget="handle"/>
+                    <field name="name"/>
+                    <field name="product_name" invisible="1"/>
+                    <field name="product_code" invisible="1"/>
+                    <field name="product_tmpl_id" string="Product" invisible="1"/>
+                    <field name="delay"/>
+                    <field name="min_qty"/>
+                    <field name="price" string="Price"/>
+                    <field name="date_start" invisible="1"/>
+                    <field name="date_end" invisible="1"/>
+                </tree>
+            </field>
+        </record>
+  
+     </data>
+</openerp>
