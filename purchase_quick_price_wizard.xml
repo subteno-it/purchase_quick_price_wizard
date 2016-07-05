@@ -2,7 +2,6 @@
 <openerp>
     <data>
 
-
         <!-- View on Invoice.order-->
         <record model="ir.ui.view" id="purchase_quick_price_wizard_invoice_form_view">
             <field name="name">wizard.quick.price.invoice.line.form</field>
@@ -15,7 +14,7 @@
                 </xpath>
             </field>
         </record>
-        
+
         <!-- View on purchase.order-->
         <record model="ir.ui.view" id="purchase_quick_price_wizard_purchaxe_order_form_view">
             <field name="name">wizard.quick.price.purchase.order.line.form</field>
@@ -28,9 +27,9 @@
                 </xpath>
             </field>
         </record>
-        
+
         <!-- Wizard -->
-        
+
         <record model="ir.ui.view" id="purchase_quick_price_wizard_view">
             <field name="name">wizard.purchase.order.line.form</field>
             <field name="model">product.supplierinfo</field>
@@ -50,6 +49,6 @@
                 </tree>
             </field>
         </record>
-  
-     </data>
+
+    </data>
 </openerp>
