@@ -39,7 +39,7 @@
                     <field name="sequence" widget="handle"/>
                     <field name="name"/>
                     <field name="product_name" invisible="1"/>
-                    <field name="product_code" invisible="1"/>
+                    <field name="product_code" invisible="0"/>
                     <field name="product_tmpl_id" string="Product" invisible="1"/>
                     <field name="delay"/>
                     <field name="min_qty"/>
