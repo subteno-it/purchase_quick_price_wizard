@@ -12,7 +12,9 @@
     'website': 'www.iguana-yachts.com',
     'depends': ['purchase', 'account'],
     'data': [
-        'purchase_quick_price_wizard.xml',
+        'views/account_invoice.xml',
+        'views/purchase_order.xml',
+        'views/product_supplierinfo.xml',
 
 
     ],
